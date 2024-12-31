@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.calculadora {
+    width: 400px;
+    height: 600px;
+    background-color: #615746;
+    /* Separa en filas  */
+    display: grid; 
+    /* cuatro columnas de 80px cada unaa */
+    grid-template-columns: repeat(4,80px);
+    grid-template-rows: repeat(6,80px);
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.calculadora button{
+    font-size: 1.5rem;
+    background-color: #539987;
+    border-radius: 50%;
+    border: 2px #333333 solid;
+}
+
+.display {
+    height: 100px;
+    background-color: #344055;
+    opacity: .7;
+    grid-column: 1/-1;
+}
