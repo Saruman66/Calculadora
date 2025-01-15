@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora con html css y js</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- ATRIBUTOS: class y data -->
-    <div class="calculadora"><!-- div.calculadora -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ATRIBUTOS: class y data -->
+
+      <div class="calculadora">
+        <!-- div.calculadora -->
         <div class="display">
+            
             <!-- las clases van a ser unicamente para la hoja de estilos -->
             <div class="valor-superior" data-valor-superior></div>
             <div class="valor-inferior" data-valor-inferior></div>
         </div>
-        <button data-borrar-todo>AC</button>
+        <button class="span2" data-borrar-todo>AC</button>
         <button data-borrar>DEL</button>
         <button data-operador>+</button>
         <button data-numero>1</button>
@@ -29,10 +34,9 @@
         <button data-numero>0</button>
         <button data-operador>-</button>
         <button data-operador>.</button>
-        <button data-operador>=</button>
-
+        <button data-igual>=</button>
+      </div>
     </div>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

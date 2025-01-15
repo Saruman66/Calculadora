@@ -1,32 +1,68 @@
+/* Aplica a todos los elementos */
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Cambia el modelo de caja para incluir borde y relleno en el tamaño total */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
 }
 
+/* Estilo general para la calculadora */
 .calculadora {
-    width: 400px;
-    height: 600px;
-    background-color: #615746;
-    /* Separa en filas  */
-    display: grid; 
-    /* cuatro columnas de 80px cada unaa */
-    grid-template-columns: repeat(4,80px);
-    grid-template-rows: repeat(6,80px);
-    justify-content: center;
-    border-radius: 20px;
+    width: 400px; /* Ancho fijo de la calculadora */
+    height: 600px; /* Altura fija de la calculadora */
+    background-color: #615746; /* Color de fondo marrón oscuro */
+    display: grid; /* Utiliza un sistema de cuadrícula para organizar los elementos */
+    grid-template-columns: repeat(4,80px); /* Define 4 columnas de 80px de ancho cada una */
+    grid-template-rows: 130px repeat(6,80px); /* La primera fila tiene 130px, las siguientes 6 filas tienen 80px cada una */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
+    border-radius: 20px; /* Bordes redondeados con un radio de 20px */
+    padding-top: 20px; /* Agrega un relleno superior de 20px */
 }
 
+/* Contenedor general para centrar la calculadora */
+.container {
+    display: flex; /* Aplica un modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+}
+
+/* Estilo para los botones de la calculadora */
 .calculadora button{
-    font-size: 1.5rem;
-    background-color: #539987;
-    border-radius: 50%;
-    border: 2px #333333 solid;
+    font-size: 1.5rem; /* Tamaño de fuente grande para los números y operadores */
+    background-color: #539987; /* Color de fondo verde azulado */
+    border-radius: 50%; /* Forma circular para los botones */
+    border: 2px #333333 solid; /* Borde sólido gris oscuro de 2px */
+    margin: 2px; /* Espaciado externo de 2px alrededor de cada botón */
 }
 
+/* Estilo para los botones al pasar el cursor */
+.calculadora button:hover {
+    background-color: silver; /* Cambia el color de fondo a plateado al pasar el cursor */
+}
+
+/* Estilo para el área de visualización */
 .display {
-    height: 100px;
-    background-color: #344055;
-    opacity: .7;
-    grid-column: 1/-1;
+    height: 120px; /* Altura fija del área de visualización */
+    background-color: #344055; /* Color de fondo gris azulado oscuro */
+    opacity: .7; /* Hace el fondo semitransparente */
+    grid-column: 1/-1; /* Ocupa todas las columnas disponibles en la cuadrícula */
+    border: 2px #333333 solid; /* Borde sólido gris oscuro de 2px */
+    text-align: end; /* Alinea el texto al final (derecha) */
+    padding: 10px 0; /* Relleno vertical de 10px y horizontal de 0 */
+}
+
+/* Clase para elementos que ocupan dos columnas */
+.span2 {
+    grid-column: span 2; /* Ocupa 2 columnas en la cuadrícula */
+}
+
+/* Estilo para el valor superior en la pantalla */
+.valor-superior {
+    color: white; /* Texto de color blanco */
+    font-size: 1.2rem; /* Tamaño de fuente ligeramente más pequeño */
+    margin-bottom: 30px; /* Espaciado inferior de 30px */
+}
+
+/* Estilo para el valor inferior en la pantalla */
+.valor-inferior{
+    color: white; /* Texto de color blanco */
+    font-size: 2rem; /* Tamaño de fuente grande para mayor legibilidad */
 }
